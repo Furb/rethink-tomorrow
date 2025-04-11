@@ -7,6 +7,7 @@
   --breakpoint-desktop: 90rem;
 
   --color-*: initial;
+  --color-white: #ffffff;
   --color-dark: #03071e;
   --color-red: #dc2f02;
   --color-blue: #2e93b9;
@@ -22,13 +23,21 @@
 }
 
 @layer base {
-  /*Spaceing*/
+  /*Transition*/
+  * {
+    @apply transition duration-300 ease-in-out;
+  }
 
+  /*Spaceing*/
   .wrap {
     @apply w-full max-w-9/10 mx-auto;
   }
 
   /*Typography*/
+
+  p {
+    @apply text-xl laptop:text-[2rem] desktop:text-[2.5rem];
+  }
 }
 
 body {
